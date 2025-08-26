@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema</title>
+    <link rel="stylesheet" href="/Aula_5/Sistemas/style.css">
+</head>
+<body>
+    <div class="container">
+<h1>🏫Sistema de cadastro Escolar </h1>
+<p>Bem-vindos ao sistema de cadastro da nossa Escola</p>
+
+<h2>📋Menu de Cadastro</h2>
+<a href="/Aula_5/Sistemas/Aluno.html"><button>👩‍🎓Cadastro do Aluno</button></a>
+<a href="/Aula_5/Sistemas/Professsor.html"><button>👩‍🏫Cadastro do Professor</button></a>
+<a href="/Aula_5/Sistemas/Curso.html"><button>📃Cadastro do Curso</button></a>
+<a href="/Aula_5/Sistemas/Livro.html"><button>📚Cadastro do Livro</button></a>
+
+<div class="formulario">
+<h2>👩‍🎓Cadastrar aluno</h2>
+<form action="">
+<label for="Nome">Nome completo:</label><br>
+<input type="Nome:" name="Nome completo"><br><br>
+
+<label for="Data de nascimento">Data de nascimento</label><br>
+  <input type="date" id="data" name="data"><br><br>
+
+  <label for="Email:">E-mail:</label><br>
+<input type="email" name="email"><br><br>
+
+<label for="Telefone">Telefone</label><br>
+<input type="tel" name="Telefone"><br><br>
+
+<label for="Série/Ano">Série/Ano</label><br><br>
+<select name="Série/Ano" id="Série/Ano">
+    <option value="selecione">Selecione</option>
+    <option value="1º ano do Fundamental">1º ano do Fundamental I</option>
+    <option value="2º ano do Fundamental">2º ano do Fundamental I</option>
+    <option value="3º ano do Fundamental">3º ano do Fundamental I</option>
+    <option value="4º ano do Fundamental">4º ano do Fundamental I</option>
+    <option value="5º ano do Fundamental">5º ano do Fundamental I</option>
+    <option value="6º ano do Fundamental">6º ano do Fundamental II</option>
+    <option value="7º ano do Fundamental">7º ano do Fundamental II</option>
+    <option value="8º ano do Fundamental">8º ano do Fundamental II</option>
+    <option value="9º ano do Fundamental">9º ano do Fundamental II</option>
+    <option value="1ª série do Ensino Médio">1ª série do Ensino Médio</option>
+    <option value="2ª série do Ensino Médio">2ª série do Ensino Médio</option>
+    <option value="3ª série do Ensino Médio">3ª série do Ensino Médio</option>
+</select><br><br>
+
+
+  <p class="titulo-periodo">Período:</p>
+
+  <input type="radio" id="manha" name="periodo" value="manha">
+  <label for="manha">Manhã</label><br>
+
+  <input type="radio" id="tarde" name="periodo" value="tarde">
+  <label for="tarde">Tarde</label><br>
+
+  <input type="radio" id="noite" name="periodo" value="noite">
+  <label for="noite">Noite</label><br>
+
+  <p class="titulo-atividades">Atividades Extras:</p>
+
+  <input type="checkbox" id="esporte" name="atividade" value="esporte">
+  <label for="esporte">Esportes</label><br>
+
+  <input type="checkbox" id="musica" name="atividade" value="musica">
+  <label for="musica">Música</label><br>
+
+  <input type="checkbox" id="teatro" name="atividade" value="teatro">
+  <label for="teatro">Teatro</label><br>
+
+  <input type="checkbox" id="informatica" name="atividade" value="informatica">
+  <label for="informatica">Informática</label><br>
+  
+
+  <p class="titulo-observacoes">Observações:</p>
+  <textarea id="observacoes" name="observacoes" rows="5" cols="40"></textarea><br><br>
+
+<button type="submit">Cadastrar Aluno</button>
+  <button type="reset">Limpar Dados</button>
+
+
+
+</select><br><br>
+</form>
+
+</div>
+    </div>
+</body>
+</html>
