@@ -1,0 +1,144 @@
+/* Paleta: bege, verde oliva, azul claro, azul bebê, verde água */
+:root {
+  --bege: #f5e6cc;
+  --verde-oliva: #708238;
+  --azul-claro: #a2d2ff;
+  --azul-bebe: #caf0f8;
+  --verde-agua: #80ed99;
+  --texto: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bege);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: var(--verde-oliva);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+header nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, var(--azul-bebe), var(--azul-claro));
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: var(--verde-agua);
+  color: #000;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero .btn:hover {
+  background: var(--verde-oliva);
+  color: #fff;
+}
+
+/* Sections */
+.container {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.container h2 {
+  margin-bottom: 20px;
+  color: var(--verde-oliva);
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form input, form select, form textarea, form button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+form button {
+  background: var(--verde-agua);
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: var(--verde-oliva);
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  background: var(--verde-oliva);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
