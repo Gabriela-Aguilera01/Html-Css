@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+.img-direita {
+  float: right;
+  margin: 10px;
+  width: 200px;
+  border-radius: 8px;
+}
