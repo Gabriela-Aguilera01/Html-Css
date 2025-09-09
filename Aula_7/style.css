@@ -1,0 +1,77 @@
+p { 
+    color: blue;
+ }
+ #Título-principal{
+    background-color: yellow;
+ }
+ .Subtítulos{
+    color: green;
+ }
+ li {
+    color: blueviolet;
+  }
+  .caixa1{
+    background-color: aqua;
+  }
+  .caixa2{
+    background-color: aquamarine;
+  }
+  .agrupado{
+    color: palevioletred
+  }
+  #texto-centralizado{
+    text-align: center;
+  }
+  #link1{
+    color: rgb(255, 8, 222);
+  }
+  #link2{
+    color: greenyellow;
+  }
+  .negrito{
+    font-weight: bolder;
+    color: black;
+  }
+  img { 
+    border: 5cap solid rgb(138, 114, 255); 
+}
+div p {
+     color: rgb(235, 78, 154); 
+    }
+    .paragrafo1{
+        color: darkcyan;
+    }
+.paragrafo2{
+    color: darkmagenta;
+}
+#fonte-arial { 
+    font-family: Arial, sans-serif; 
+}
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.underline { text-decoration: underline; }
+div h3 { color: rgb(0, 255, 89); }
+
+#caixa1 { 
+    background: rgb(57, 251, 251); 
+}
+#caixa2 { 
+    background: rgb(195, 117, 255);
+ }
+#caixa3 { 
+    background: rgb(230, 255, 107);
+ }
+ .destaque { color:
+     rgb(73, 249, 255); 
+    }
+#caixa-estilizada {
+     background: rgb(244, 183, 255); border: 2px solid rgb(255, 0, 0);
+ }
+ .link-sublinhado { 
+    text-decoration: underline;
+ }
+#ex20 h1, 
+#ex20 p, 
+#ex20 a {
+  color: rgb(255, 137, 41);
+}
