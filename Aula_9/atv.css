@@ -1,0 +1,47 @@
+.tabela1{
+    border: solid skyblue;
+}
+.tabela1 th{
+    background-color: aquamarine;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 10px;
+}
+.tabela1 td{
+    text-align: center;
+    padding: 10px;
+}
+.tabela2{
+    border: solid aquamarine;
+}
+.tabela2 th{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px;
+    background-color: aqua;
+}
+.tabela2 td{
+    text-align: center;
+}
+.pontos{
+    color: blue;
+    font-size: larger;
+    font-weight: border;
+}
+.vencedor{
+    background-color: rgb(189, 255, 246);
+}
+.tabela3{
+  border: solid black; 
+  padding: 10px;
+}
+.tabela3 th{
+text-align: center;
+background-color: rgb(183, 170, 255);
+padding: 10px;
+}
+img{
+    width: 100px;
+      display: block;
+      margin: auto;
+}
