@@ -2,190 +2,267 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog Garden Glow</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Blog Inspiração</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+    header {
+      background-color: #982a2a;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 1.5em 2em;
+      justify-content: space-between;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 1.7em;
+      letter-spacing: 2px;
+    }
+    nav {
+      display: flex;
+      gap: 2em;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      padding: 0.5em 1em;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+    nav a:hover, nav a:focus {
+      background: #691a1a;
+    }
+    .container {
+      display: flex;
+      max-width: 1100px;
+      margin: 2em auto;
+      gap: 2em;
+    }
+    main {
+      flex: 3;
+    }
+    aside {
+      flex: 1;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      padding: 2em 1em;
+      height: fit-content;
+    }
+    aside h2 {
+      color: #982a2a;
+      font-size: 1.1em;
+      margin-top: 0;
+      margin-bottom: 1em;
+      border-bottom: 2px solid #f7ca18;
+      padding-bottom: 0.5em;
+    }
+    .popular-posts {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .popular-posts li {
+      margin-bottom: 1.2em;
+    }
+    .popular-posts a {
+      color: #982a2a;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+    .popular-posts a:hover {
+      color: #f7ca18;
+    }
+    article {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      margin-bottom: 2em;
+      padding: 1.5em 2em;
+    }
+    article header {
+      margin-bottom: 1.2em;
+      border-bottom: 1px solid #e3e3e3;
+      padding-bottom: 0.7em;
+    }
+    article h1, article h2 {
+      color: #982a2a;
+      margin-top: 0;
+    }
+    .date {
+      color: #fffdfd;
+      font-size: 0.95em;
+      margin-top: 0.3em;
+    }
+    article footer {
+      margin-top: 1.5em;
+      color: #ffffff;
+      font-size: 0.92em;
+      border-top: 1px solid #e3e3e3;
+      padding-top: 0.7em;
+    }
+    section {
+      margin-bottom: 1em;
+    }
+    .page-footer {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 2em 0 1em 0;
+      margin-top: 2em;
+    }
+    .social-links {
+      margin-top: 1em;
+      display: flex;
+      justify-content: center;
+      gap: 1.5em;
+    }
+    .social-links a {
+      color: #f7ca18;
+      text-decoration: none;
+      font-size: 1.15em;
+      transition: color 0.2s;
+    }
+    .social-links a:hover {
+      color: #fff;
+    }
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+      aside {
+        margin-bottom: 2em;
+      }
+    }
+  </style>
 </head>
 <body>
-<style>
-    body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f4fff4;
-  color: #333;
-}
-
-header {
-  background: #6ab46a;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-header h1 {
-  margin: 0;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-.conteudo-principal {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1000px;
-  margin: 30px auto;
-  gap: 20px;
-}
-
-.posts {
-  flex: 2;
-}
-
-article {
-  background: #ffffff;
-  margin-bottom: 20px;
-  padding: 15px 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-article header h2 {
-  margin-top: 0;
-  color: #4a8c4a;
-}
-
-article footer {
-  margin-top: 10px;
-  font-size: 0.9em;
-  color: #2e6d2e;
-}
-
-aside {
-  flex: 1;
-  background: #e9f7e9;
-  padding: 15px;
-  border-radius: 8px;
-  height: fit-content;
-}
-
-aside h3 {
-  margin-top: 0;
-  color: #407a40;
-}
-
-aside ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-aside li {
-  margin-bottom: 10px;
-}
-
-aside a {
-  color: #2e6d2e;
-  text-decoration: none;
-}
-
-aside a:hover {
-  text-decoration: underline;
-}
-</style>
-
-
   <header>
-    <h1>Garden Glow</h1>
+    <div class="logo">Blog Inspiração</div>
     <nav>
-      <ul>
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#posts">Posts</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
+      <a href="#home">Início</a>
+      <a href="#artigos">Artigos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+      <a href="#categorias">Categorias</a>
     </nav>
   </header>
-  <main>
-    <div class="conteudo-principal">
-      <section class="posts">
-
-        <article>
-          <header>
-            <h2>Como cuidar de suculentas</h2>
-            <p>Publicado em: 05/10/2025</p>
-          </header>
-          <section>
-            <p>As suculentas são plantas resistentes e perfeitas para quem não tem muito tempo para jardinagem. Aprenda a regar, escolher o vaso e cuidar das suas plantas.</p>
-          </section>
-          <footer>
-            <p>Autor: Equipe Garden Glow</p>
-          </footer>
-        </article>
-
-        <article>
-          <header>
-            <h2>Dicas de iluminação para plantas</h2>
-            <p>Publicado em: 01/10/2025</p>
-          </header>
-          <section>
-            <p>A iluminação é fundamental para a saúde das plantas. Descubra quais plantas se adaptam melhor à luz natural e quais precisam de luz artificial.</p>
-          </section>
-          <footer>
-            <p>Autor: Equipe Garden Glow</p>
-          </footer>
-        </article>
-
-        <article>
-          <header>
-            <h2>Decoração com plantas em ambientes pequenos</h2>
-            <p>Publicado em: 28/09/2025</p>
-          </header>
-          <section>
-            <p>Mesmo em espaços pequenos é possível ter verde. Veja ideias de decoração que usam plantas de forma prática e elegante.</p>
-          </section>
-          <footer>
-            <p>Autor: Equipe Garden Glow</p>
-          </footer>
-        </article>
-
-      </section>
-
-      <aside>
-        <h3>Posts Populares</h3>
-        <ul>
-          <li><a href="#">10 plantas fáceis para iniciantes</a></li>
-          <li><a href="#">Como montar um mini jardim em casa</a></li>
-          <li><a href="#">Benefícios de ter plantas no escritório</a></li>
-        </ul>
-      </aside>
-
+  
+  <div class="container">
+    <main>
+      <article>
+        <header>
+          <h1>Como Organizar sua Rotina para Estudar Melhor</h1>
+          <div class="date">07 de outubro de 2025</div>
+        </header>
+        <section>
+          <h2>Planejamento Diário</h2>
+          <p>
+            Ter um plano claro para cada dia é fundamental. Utilize uma agenda ou aplicativo para organizar suas tarefas e horários de estudo. Isso ajuda a manter o foco e evitar procrastinação.
+          </p>
+        </section>
+        <section>
+          <h2>Ambiente de Estudo</h2>
+          <p>
+            Escolha um lugar tranquilo, limpo e bem iluminado. Um bom ambiente faz toda a diferença para a concentração e absorção do conteúdo.
+          </p>
+        </section>
+        <section>
+          <h2>Pausas e Revisões</h2>
+          <p>
+            Lembre-se de fazer pequenas pausas entre os blocos de estudo e revise o conteúdo aprendido ao final do dia para fixar o conhecimento.
+          </p>
+        </section>
+        <footer>
+          Escrito por <strong>Gabriela Aguilera</strong>
+        </footer>
+      </article>
+      
+      <article>
+        <header>
+          <h1>Dicas para uma Alimentação Saudável no Dia a Dia</h1>
+          <div class="date">02 de outubro de 2025</div>
+        </header>
+        <section>
+          <h2>Coma de Forma Variada</h2>
+          <p>
+            Inclua alimentos de todos os grupos: proteínas, carboidratos, frutas, verduras e legumes. A variedade garante o fornecimento de nutrientes essenciais.
+          </p>
+        </section>
+        <section>
+          <h2>Evite Industrializados</h2>
+          <p>
+            Prefira alimentos naturais e preparados em casa. Industrializados costumam ter excesso de sódio, açúcar e conservantes.
+          </p>
+        </section>
+        <section>
+          <h2>Hidratação é Fundamental</h2>
+          <p>
+            Beba água ao longo do dia, mesmo sem sentir sede. A hidratação adequada melhora a disposição e a saúde como um todo.
+          </p>
+        </section>
+        <footer>
+          Escrito por <strong>João Silva</strong>
+        </footer>
+      </article>
+      
+      <article>
+        <header>
+          <h1>Como Aprender um Novo Idioma de Forma Eficiente</h1>
+          <div class="date">27 de setembro de 2025</div>
+        </header>
+        <section>
+          <h2>Defina um Objetivo Claro</h2>
+          <p>
+            Saber por que você quer aprender o idioma e onde deseja chegar ajuda a manter a motivação durante o processo.
+          </p>
+        </section>
+        <section>
+          <h2>Pratique Todos os Dias</h2>
+          <p>
+            Dedique pelo menos alguns minutos diários para praticar: ler, ouvir, falar e escrever. A constância é o segredo do sucesso.
+          </p>
+        </section>
+        <section>
+          <h2>Use Recursos Diversos</h2>
+          <p>
+            Aproveite aplicativos, vídeos, músicas e conversas com nativos. Isso torna o aprendizado mais divertido e eficiente.
+          </p>
+        </section>
+        <footer>
+          Escrito por <strong>Ana Costa</strong>
+        </footer>
+      </article>
+    </main>
+    <aside>
+      <h2>Posts Populares</h2>
+      <ul class="popular-posts">
+        <li><a href="#">7 Hábitos para uma Vida Mais Produtiva</a></li>
+        <li><a href="#">Como Economizar Dinheiro no Mês</a></li>
+        <li><a href="#">Rotina Matinal: Dicas para Começar Bem o Dia</a></li>
+        <li><a href="#">Apps Essenciais para Estudantes</a></li>
+        <li><a href="#">Receitas Saudáveis e Fáceis</a></li>
+      </ul>
+    </aside>
+  </div>
+  
+  <footer class="page-footer">
+    &copy; 2025 Blog Inspiração. Todos os direitos reservados.
+    <div class="social-links">
+      <a href="https://instagram.com/" target="_blank">Instagram</a>
+      <a href="https://facebook.com/" target="_blank">Facebook</a>
+      <a href="https://twitter.com/" target="_blank">Twitter</a>
+      <a href="mailto:contato@bloginspiracao.com">E-mail</a>
     </div>
-    <footer>
-  <p>© 2025 Garden Glow. Todos os direitos reservados.</p>
-  <p>
-    Siga-nos: 
-    <a href="https://facebook.com" target="_blank">Facebook</a> | 
-    <a href="https://instagram.com" target="_blank">Instagram</a> | 
-    <a href="https://twitter.com" target="_blank">Twitter</a>
-  </p>
-</footer>
-  </main>
-
+  </footer>
 </body>
 </html>

@@ -2,78 +2,108 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Linha do Tempo - Exploração Espacial</title>
+  <title>Linha do Tempo de Eventos Históricos</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f0f8ff;
-      color: #333;
+      background: #f7f7f7;
       margin: 0;
-      padding: 20px;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
+      padding: 2em;
+      color: #222;
     }
-
+    main {
+      max-width: 700px;
+      margin: 2em auto;
+      background: #fff;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
     h1 {
+      color: #2a5298;
       text-align: center;
-      color: #1e90ff;
+      margin-bottom: 2em;
     }
-
+    .timeline {
+      border-left: 4px solid #a259e4;
+      padding-left: 2em;
+      margin-left: 1em;
+    }
     article {
-      background-color: #e0f0ff;
-      padding: 15px 20px;
-      margin-bottom: 15px;
-      border-left: 5px solid #1e90ff;
-      border-radius: 6px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 2em;
+      position: relative;
     }
-
-    time {
-      font-weight: bold;
-      color: #ff4081;
+    article::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: -2.1em;
+      top: 0.6em;
+      width: 1.2em;
+      height: 1.2em;
+      background: #a259e4;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      box-shadow: 0 2px 6px rgba(42,82,152,0.08);
     }
-
     h2 {
+      color: #6c2a98;
       margin-top: 0;
-      color: #176e94;
+    }
+    time {
+      display: inline-block;
+      background: #f7ca18;
+      color: #222;
+      padding: 0.15em 0.6em;
+      border-radius: 3px;
+      font-weight: bold;
+      margin-bottom: 0.7em;
+    }
+    p {
+      margin-top: 0.7em;
     }
   </style>
 </head>
 <body>
-
-  <h1>Linha do Tempo da Exploração Espacial</h1>
-
-  <article>
-    <h2>Lançamento do Sputnik 1</h2>
-    <p>O primeiro satélite artificial da Terra foi lançado pela União Soviética em 
-      <time datetime="1957-10-04">4 de outubro de 1957</time>, marcando o início da era espacial.</p>
-  </article>
-
-  <article>
-    <h2>Primeiro homem no espaço</h2>
-    <p>Yuri Gagarin, cosmonauta soviético, tornou-se o primeiro homem a viajar pelo espaço em 
-      <time datetime="1961-04-12">12 de abril de 1961</time>.</p>
-  </article>
-
-  <article>
-    <h2>Chegada à Lua</h2>
-    <p>A missão Apollo 11 levou Neil Armstrong e Buzz Aldrin à Lua em 
-      <time datetime="1969-07-20">20 de julho de 1969</time>. Armstrong foi o primeiro a pisar na superfície lunar.</p>
-  </article>
-
-  <article>
-    <h2>Lançamento do Telescópio Hubble</h2>
-    <p>O Hubble foi lançado em 
-      <time datetime="1990-04-24">24 de abril de 1990</time> e permitiu imagens detalhadas do universo.</p>
-  </article>
-
-  <article>
-    <h2>Missão Curiosity em Marte</h2>
-    <p>O rover Curiosity pousou em Marte em 
-      <time datetime="2012-08-06">6 de agosto de 2012</time> e começou a explorar a superfície do planeta.</p>
-  </article>
-
+  <main>
+    <h1>Linha do Tempo de Eventos Históricos</h1>
+    <div class="timeline">
+      <article>
+        <h2>Queda da Bastilha</h2>
+        <time datetime="1789-07-14">14 de Julho de 1789</time>
+        <p>
+          A queda da Bastilha marcou o início da Revolução Francesa, simbolizando a luta por liberdade e igualdade.
+        </p>
+      </article>
+      <article>
+        <h2>Independência do Brasil</h2>
+        <time datetime="1822-09-07">7 de Setembro de 1822</time>
+        <p>
+          Neste dia, Dom Pedro I proclamou a independência do Brasil às margens do rio Ipiranga, separando-se de Portugal.
+        </p>
+      </article>
+      <article>
+        <h2>Primeiro Voo dos Irmãos Wright</h2>
+        <time datetime="1903-12-17">17 de Dezembro de 1903</time>
+        <p>
+          Os irmãos Wright realizaram o primeiro voo controlado e sustentado em um avião motorizado, mudando a história da aviação.
+        </p>
+      </article>
+      <article>
+        <h2>Chegada do Homem à Lua</h2>
+        <time datetime="1969-07-20">20 de Julho de 1969</time>
+        <p>
+          Neil Armstrong tornou-se o primeiro homem a pisar na Lua durante a missão Apollo 11, com a famosa frase: "Um pequeno passo para o homem, um grande salto para a humanidade".
+        </p>
+      </article>
+      <article>
+        <h2>Invenção da World Wide Web</h2>
+        <time datetime="1989-03-12">12 de Março de 1989</time>
+        <p>
+          Tim Berners-Lee propôs a World Wide Web, revolucionando o acesso à informação e a comunicação global.
+        </p>
+      </article>
+    </div>
+  </main>
 </body>
 </html>

@@ -1,163 +1,235 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfólio Pessoal - Seu Nome</title>
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #fdf0f5;
-  color: #333;
-  line-height: 1.6;
-}
-header {
-  background-color: #ff79a9;
-  color: white;
-  text-align: center;
-  padding: 25px 0;
-}
-header h1 {
-  margin: 0;
-}
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-nav a:hover {
-  text-decoration: underline;
-}
-.container {
-  display: flex;
-  gap: 20px;
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 0 20px;
-}
-main section {
-  flex: 2;
-}
-section h2 {
-  color: #ff4081;
-}
-section article {
-  background: #ffe0f0;
-  margin-bottom: 15px;
-  padding: 15px 20px;
-  border-radius: 8px;
-}
-section article h3 {
-  margin-top: 0;
-  color: #d81b60;
-}
-#habilidades ul {
-  list-style: disc inside;
-}
-aside {
-  flex: 1;
-  background: #ffd0e0;
-  padding: 15px 20px;
-  border-radius: 8px;
-}
-aside h2 {
-  margin-top: 0;
-  color: #d81b60;
-}
-aside a {
-  text-decoration: none;
-  color: #a60050;
-}
-aside a:hover {
-  text-decoration: underline;
-}
-footer {
-  background-color: #ff79a9;
-  color: white;
-  text-align: center;
-  padding: 20px 10px;
-  margin-top: 40px;
-}
-footer a {
-  color: #ffd0e0;
-  text-decoration: none;
-  margin: 0 5px;
-}
-footer a:hover {
-  text-decoration: underline;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>Portfólio de Gabriela Aguilera</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #ffe1ef 0%, #d0e8ff 100%);
+      margin: 0;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(90deg, #fbb1d8 60%, #b3d8fc 100%);
+      color: #fff;
+      padding: 2em 0 1em 0;
+      text-align: center;
+      border-bottom: 4px solid #fbb1d8;
+      box-shadow: 0 2px 8px rgba(251,177,216,0.13);
+    }
+    header h1 {
+      margin: 0 0 0.5em 0;
+      font-size: 2.5em;
+      letter-spacing: 2px;
+      font-weight: bold;
+      text-shadow: 0 2px 4px #c9bad6;
+    }
+    nav {
+      margin-top: 1em;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      padding: 0.5em 1em;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+    }
+    nav a:hover, nav a:focus {
+      background: #fff;
+      color: #fbb1d8;
+    }
+    .container {
+      display: flex;
+      max-width: 1100px;
+      margin: 2em auto;
+      gap: 2em;
+    }
+    main {
+      flex: 3;
+    }
+    aside {
+      flex: 1;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(179,216,252,0.13);
+      padding: 2em 1em;
+      height: fit-content;
+      border-left: 6px solid #fbb1d8;
+      margin-top: 0.5em;
+    }
+    aside h2 {
+      color: #fbb1d8;
+      font-size: 1.1em;
+      margin-top: 0;
+      margin-bottom: 1em;
+      border-bottom: 2px solid #b3d8fc;
+      padding-bottom: 0.5em;
+      letter-spacing: 1px;
+    }
+    aside p, aside a {
+      font-size: 1em;
+      color: #333;
+    }
+    section {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(179,216,252,0.13);
+      padding: 2em;
+      margin-bottom: 2em;
+      border-left: 6px solid #b3d8fc;
+    }
+    section h2 {
+      color: #b3d8fc;
+      margin-top: 0;
+      font-size: 1.3em;
+      border-bottom: 2px solid #fbb1d8;
+      padding-bottom: 0.3em;
+      margin-bottom: 1em;
+      letter-spacing: 1px;
+    }
+    #projetos article {
+      background: #f7f7ff;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(251,177,216,0.10);
+      margin-bottom: 1.5em;
+      padding: 1.2em;
+      border-left: 4px solid #fbb1d8;
+    }
+    #projetos h3 {
+      color: #fbb1d8;
+      margin-top: 0;
+      margin-bottom: 0.4em;
+    }
+    #habilidades ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+    #habilidades li {
+      background: linear-gradient(90deg, #fbb1d8 60%, #b3d8fc 100%);
+      color: #fff;
+      padding: 0.6em 1.2em;
+      border-radius: 4px;
+      font-weight: bold;
+      box-shadow: 0 1px 2px rgba(179,216,252,0.10);
+      font-size: 1em;
+      letter-spacing: 1px;
+    }
+    footer {
+      background: linear-gradient(90deg, #b3d8fc 60%, #fbb1d8 100%);
+      color: #fff;
+      text-align: center;
+      padding: 2em 0 1em 0;
+      margin-top: 2em;
+      border-top: 4px solid #fbb1d8;
+      box-shadow: 0 -2px 8px rgba(251,177,216,0.14);
+    }
+    .social-links {
+      margin-top: 1em;
+      display: flex;
+      justify-content: center;
+      gap: 1.5em;
+    }
+    .social-links a {
+      color: #fbb1d8;
+      text-decoration: none;
+      font-size: 1.15em;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+    .social-links a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+      aside {
+        margin-bottom: 2em;
+      }
+    }
+  </style>
 </head>
 <body>
-<header>
-<h1>Seu Nome</h1>
-<nav>
-<ul>
-<li><a href="#sobre">Sobre</a></li>
-<li><a href="#projetos">Projetos</a></li>
-<li><a href="#habilidades">Habilidades</a></li>
-<li><a href="#contato">Contato</a></li>
-</ul>
-</nav>
-</header>
-<main class="container">
-<section id="sobre">
-<h2>Sobre Mim</h2>
-<p>Sou um(a) desenvolvedor(a) apaixonado(a) por criar soluções web criativas e funcionais. Tenho experiência em HTML, CSS, JavaScript e projetos integradores.</p>
-</section>
-<section id="projetos">
-<h2>Projetos</h2>
-<article>
-<h3>Projeto 1: Site de Receitas</h3>
-<p>Um site interativo de receitas culinárias com busca, filtros e design responsivo.</p>
-</article>
-<article>
-<h3>Projeto 2: Aplicativo de Tarefas</h3>
-<p>Um gerenciador de tarefas para organizar atividades diárias com persistência no navegador.</p>
-</article>
-<article>
-<h3>Projeto 3: Blog Pessoal</h3>
-<p>Blog completo com posts, comentários e sistema de FAQ usando HTML semântico.</p>
-</article>
-</section>
-<section id="habilidades">
-<h2>Habilidades</h2>
-<ul>
-<li>HTML5 e CSS3</li>
-<li>JavaScript (Vanilla e Frameworks)</li>
-<li>Design Responsivo</li>
-<li>Git e GitHub</li>
-<li>UX/UI básico</li>
-</ul>
-</section>
-<aside id="contato">
-<h2>Contato</h2>
-<p>Email: <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></p>
-<p>Telefone: (00) 0000-0000</p>
-<p>Redes Sociais:</p>
-<ul>
-<li><a href="#">LinkedIn</a></li>
-<li><a href="#">GitHub</a></li>
-<li><a href="#">Instagram</a></li>
-</ul>
-</aside>
-</main>
-<footer>
-<p>© 2025 Seu Nome | Siga-me nas redes sociais</p>
-<p>
-<a href="#">LinkedIn</a> |
-<a href="#">GitHub</a> |
-<a href="#">Instagram</a>
-</p>
-</footer>
+  <header>
+    <h1>Gabriela Aguilera</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+  <div class="container">
+    <main>
+      <section id="sobre">
+        <h2>Sobre mim</h2>
+        <p>
+          Olá! Meu nome é Gabriela Aguilera, sou desenvolvedora web apaixonada por tecnologia, design e experiências digitais inovadoras.<br>
+          Tenho experiência em front-end e back-end, valorizando o aprendizado contínuo e a criatividade em cada projeto que realizo.
+        </p>
+      </section>
+      <section id="projetos">
+        <h2>Projetos</h2>
+        <article>
+          <h3>Site de Receitas Saudáveis</h3>
+          <p>
+            Um portal interativo com receitas, dicas de nutrição e busca por ingredientes. Desenvolvido com HTML, CSS, JavaScript e integração com API.
+          </p>
+        </article>
+        <article>
+          <h3>Aplicativo de Lista de Tarefas</h3>
+          <p>
+            Ferramenta simples para organização diária, com cadastro de tarefas, sistema de prioridades e notificações. Desenvolvido em React.
+          </p>
+        </article>
+        <article>
+          <h3>Portfólio de Fotografia</h3>
+          <p>
+            Galeria online para exposição de fotografias autorais, com layout responsivo e efeitos visuais. Criado com HTML, CSS e um pouco de JavaScript.
+          </p>
+        </article>
+      </section>
+      <section id="habilidades">
+        <h2>Habilidades</h2>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Git & GitHub</li>
+          <li>UX/UI Design</li>
+          <li>Node.js</li>
+          <li>Figma</li>
+        </ul>
+      </section>
+    </main>
+    <aside id="contato">
+      <h2>Contato</h2>
+      <p>Email: <a href="mailto:gabriela.aguilera@email.com">gabriela.aguilera@email.com</a></p>
+      <p>Localização: São Paulo, Brasil</p>
+      <p>Disponível para novos projetos e parcerias!</p>
+    </aside>
+  </div>
+  <footer>
+    <div>
+      &copy; 2025 Gabriela Aguilera. Todos os direitos reservados.
+    </div>
+    <div class="social-links">
+      <a href="https://instagram.com/" target="_blank">Instagram</a>
+      <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Gabriela-Aguilera01" target="_blank">GitHub</a>
+      <a href="mailto:gabriela.aguilera@email.com">E-mail</a>
+    </div>
+  </footer>
 </body>
 </html>

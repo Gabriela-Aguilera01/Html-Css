@@ -2,133 +2,124 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu de Navegação</title>
+  <title>Filmes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f7f7f7;
+    }
+    header {
+      background-color: #2a9839;
+      color: #fff;
+      padding: 2em 0 1em 0;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 0.5em 0;
+      font-size: 2.2em;
+    }
+    header p {
+      margin: 0;
+      font-size: 1.2em;
+      font-style: italic;
+      opacity: 0.85;
+    }
+    nav {
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      padding: 0.5em 0;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      border-bottom: 2px solid #45982a;
+    }
+    nav a {
+      color: #33982a;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      padding: 0.5em 1em;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+    }
+    nav a:hover, nav a:focus {
+      background: #2a9847;
+      color: #fff;
+    }
+    main {
+      max-width: 700px;
+      margin: 2em auto;
+      padding: 2em;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    section {
+      margin-bottom: 2em;
+    }
+    section h2 {
+      color: #2a9863;
+      margin-top: 0;
+    }
+    footer {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      margin-top: 2em;
+    }
+    footer a {
+      color: #18f7f7;
+      text-decoration: none;
+      margin-left: 0.5em;
+    }
+  </style>
 </head>
 <body>
-
-
-    <style>
-        body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #f3fff3;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-header {
-  background-color: #6ab46a;
-  color: white;
-  text-align: center;
-  padding: 25px 0;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-  border-bottom: 5px solid #4c8c4a;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.2em;
-  letter-spacing: 1.5px;
-}
-
-header p {
-  font-style: italic;
-  margin: 5px 0 15px;
-}
-
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  background-color: #4c8c4a;
-  padding: 10px 18px;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-nav a:hover {
-  background-color: #81c784;
-  transform: scale(1.05);
-}
-
-main {
-  padding: 40px;
-  text-align: center;
-}
-
-section {
-  margin-bottom: 60px;
-}
-
-section h2 {
-  color: #4c8c4a;
-  margin-bottom: 10px;
-  font-size: 1.8em;
-}
-
-section p {
-  width: 70%;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-html {
-  scroll-behavior: smooth;
-}
-    </style>
-
   <header>
-    <h1>Garden Glow</h1>
-    <p>Conectando você à natureza</p>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#galeria">Galeria</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
+    <h1>Meu Site de Filmes</h1>
+    <p>Seu portal de críticas, dicas e novidades do cinema</p>
   </header>
+  
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#dicas">Dicas</a>
+    <a href="#noticias">Notícias</a>
+    <a href="#contato">Contato</a>
+  </nav>
 
   <main>
     <section id="inicio">
       <h2>Início</h2>
-      <p>Bem-vindo ao Garden Glow, o lugar onde a natureza encontra a harmonia.</p>
+      <p>Bem-vindo ao Meu Site de Filmes! Aqui você encontra tudo sobre cinema.</p>
     </section>
-
-    <section id="sobre">
-      <h2>Sobre</h2>
-      <p>Somos apaixonados por plantas e acreditamos no poder que elas têm de transformar espaços e vidas.</p>
+    <section id="reviews">
+      <h2>Reviews</h2>
+      <p>Análises dos principais lançamentos e clássicos do cinema.</p>
     </section>
-
-    <section id="servicos">
-      <h2>Serviços</h2>
-      <p>Oferecemos consultoria, paisagismo e decoração verde para todos os ambientes.</p>
+    <section id="dicas">
+      <h2>Dicas</h2>
+      <p>Recomendações de filmes para todos os gostos.</p>
     </section>
-
-    <section id="galeria">
-      <h2>Galeria</h2>
-      <p>Veja algumas imagens inspiradoras de nossos projetos floridos.</p>
+    <section id="noticias">
+      <h2>Notícias</h2>
+      <p>Fique por dentro das novidades e tendências do mundo do cinema.</p>
     </section>
-
     <section id="contato">
       <h2>Contato</h2>
-      <p>Envie uma mensagem para: <a href="mailto:contato@gardenglow.com">contato@gardenglow.com</a></p>
+      <p>Entre em contato pelo email: <a href="mailto:contato@meusitedefilmes.com">contato@meusitedefilmes.com</a></p>
     </section>
   </main>
 
+  <footer>
+    &copy; 2025 Meu Site de Filmes. Todos os direitos reservados.
+    | Contato: <a href="mailto:contato@meusitedefilmes.com">contato@meusitedefilmes.com</a>
+  </footer>
 </body>
 </html>
   
