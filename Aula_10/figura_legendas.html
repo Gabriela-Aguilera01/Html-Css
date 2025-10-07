@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria de Figuras</title>
+</head>
+<body>
+
+<Style>
+    body {
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #fbf5ff;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  background-color: #986ab4;
+  color: white;
+  padding: 20px 0;
+  border-radius: 10px;
+}
+
+.galeria {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+figure {
+  background-color: #f2e9f7;
+  border: 2px solid #956ab4;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+figure:hover {
+  transform: scale(1.05);
+}
+
+img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+figcaption {
+  padding: 10px;
+  font-style: italic;
+  background-color: #e8d9f7;
+  border-top: 1px solid #896ab4;
+  border-radius: 0 0 10px 10px;
+}
+</Style>
+
+
+  <header>
+    <h1>Galeria de Festa de aniversario🎀🎊✨</h1>
+  </header>
+
+  <main>
+    <section class="galeria">
+      <figure>
+        <img src="/Aula_10/festa de aniversario.jpg" alt="Festa de aniversario">
+        <figcaption>Festa de aniversario</figcaption>
+      </figure>
+
+      <figure>
+        <img src="/Aula_10/Bolo.jpg" alt="Bolo">
+        <figcaption>Bolo</figcaption>
+      </figure>
+
+      <figure>
+        <img src="/Aula_10/Presente.jpg" alt="Presente">
+        <figcaption>Presente</figcaption>
+      </figure>
+    </section>
+  </main>
+
+</body>
+</html>
