@@ -1,227 +1,359 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-<title>W3.CSS Template</title>
+<title>Ateliê Design de Interiores</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Raleway:400,700">
 <style>
-body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
-body {font-size:16px;}
-.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
-.w3-half img:hover{opacity:1}
+/* Cores e Variáveis */
+:root {
+  --coquette-pink-light: #FCEEF1; /* Rosa Claríssimo/Fundo */
+  --coquette-pink: #FFC0CB; /* Rosa Chiclete/Detalhes */
+  --coquette-burgundy: #8B0000; /* Vinho/Borgonha para Texto Forte */
+  --coquette-text-main: #444;
+}
+
+/* 1. Estilo Básico do Corpo */
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: var(--coquette-pink-light);
+  color: var(--coquette-text-main);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* 2. Estilo dos Títulos */
+h1, h2, h3, h4, h5, .w3-jumbo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: var(--coquette-burgundy);
+}
+.w3-xxxlarge {
+    color: var(--coquette-burgundy) !important;
+}
+
+/* 3. Área de Navegação e Topo (Centralizado, estilo página completa) */
+.coquette-header-container {
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--coquette-pink);
+    position: relative;
+}
+
+.coquette-nav a {
+    text-decoration: none;
+    color: var(--coquette-text-main);
+    font-weight: 700;
+    margin: 0 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.coquette-nav a:hover {
+    color: var(--coquette-burgundy);
+    text-decoration: underline;
+}
+
+/* 4. Seção Principal de Destaque (Fundo Xadrez da Imagem) */
+.coquette-hero-section {
+    background-color: white;
+    padding: 40px 20px;
+    border: 2px solid var(--coquette-pink);
+    border-radius: 15px;
+    margin: 40px auto;
+    max-width: 1000px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Detalhe do Fundo Xadrez (Gingham/Vichy) */
+.coquette-hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Padrão Xadrez Rosa, simulando Gingham */
+    background-image: linear-gradient(45deg, var(--coquette-pink) 25%, transparent 25%),
+                      linear-gradient(-45deg, var(--coquette-pink) 25%, transparent 25%),
+                      linear-gradient(45deg, transparent 75%, var(--coquette-pink) 75%),
+                      linear-gradient(-45deg, transparent 75%, var(--coquette-pink) 75%);
+    background-size: 40px 40px;
+    opacity: 0.3; /* Transparência para não roubar a atenção */
+    z-index: 0;
+}
+
+.coquette-hero-content {
+    position: relative; /* Coloca o conteúdo acima do xadrez */
+    z-index: 1;
+}
+
+/* 5. Estilo da Imagem em Círculo com Borda */
+.coquette-round-img {
+    border-radius: 50%; /* Faz a imagem ser um círculo */
+    border: 5px solid var(--coquette-pink); /* Borda rosa fofa */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: auto;
+}
+
+/* 6. Seção de Chamada para Ação (CTA) - Fundo Vinho */
+.coquette-cta-section {
+    background-color: var(--coquette-burgundy);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+.coquette-cta-section h2 {
+    color: white;
+    font-size: 28px;
+}
+
+/* 7. Caixa de Texto com Fundo Rosa */
+.coquette-text-box {
+    background-color: var(--coquette-pink-light);
+    border: 1px dashed var(--coquette-pink); /* Borda tracejada fofa */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* 8. Botão Estilizado */
+.coquette-button, .w3-red, .w3-dark-grey {
+    background-color: var(--coquette-burgundy) !important;
+    color: white !important;
+    border: none;
+    border-radius: 50px; /* Mais arredondado */
+    padding: 10px 30px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.coquette-button:hover, .w3-red:hover {
+    background-color: #A52A2A !important;
+}
+
+/* Remover w3-main margin para tela inteira como na imagem */
+.w3-main {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 20px;
+}
+
+/* Ocultar elementos W3.CSS não necessários (sidebar e top menu antigos) */
+.w3-sidebar, .w3-top, #myOverlay {
+    display: none !important;
+}
+
+/* Adaptação das imagens da grade para o novo estilo */
+.w3-row-padding img {
+    margin-bottom: 15px;
+    border-radius: 8px; /* Cantos arredondados */
+    border: 2px solid var(--coquette-pink);
+    transition: transform 0.3s;
+}
+
+.w3-row-padding img:hover {
+    transform: scale(1.03);
+}
+
+/* Estilo para a classe w3-text-red que não será mais usada, mas para compatibilidade */
+.w3-text-red {
+    color: var(--coquette-burgundy) !important;
+}
+
+/* Estilo para Cards de Preços */
+.w3-ul {
+    border-radius: 10px; 
+    border: 1px solid var(--coquette-pink); 
+    overflow: hidden;
+    background-color: white !important;
+}
+.w3-light-grey {
+    background-color: var(--coquette-pink-light) !important;
+}
 </style>
 </head>
 <body>
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
-  <div class="w3-container">
-    <h3 class="w3-padding-64"><b>Design de<br>interiores</b></h3>
-  </div>
-  <div class="w3-bar-block">
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
-    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Showcase</a> 
-    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services</a> 
-    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Designers</a> 
-    <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Packages</a> 
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
-  </div>
-</nav>
+<div class="w3-main">
 
-<!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
-  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
-  <span>Design de interiores</span>
-</header>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:340px;margin-right:40px">
-
-  <!-- Header -->
-  <div class="w3-container" style="margin-top:80px" id="showcase">
-    <h1 class="w3-jumbo"><b>Interior Design</b></h1>
-    <h1 class="w3-xxxlarge w3-text-red"><b>Showcase.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-  </div>
-  
-  <!-- Photo grid (modal) -->
-  <div class="w3-row-padding">
-    <div class="w3-half">
-      <img src="/Imagens/kitchenconcrete.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
-      <img src="/Imagens/livingroom.jpg" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
-      <img src="/Imagens/diningroom.jpg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs">
+    <div class="w3-center w3-padding-32">
+        <img src="/Imagens/bow_icon.png" alt="Laço Coquette" style="width:70px;"> 
     </div>
 
-    <div class="w3-half">
-      <img src="/Imagens/atrium.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
-      <img src="/Imagens/bedroom.jpg" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
-      <img src="/Imagens/livingroom2.jpg" style="width:100%" onclick="onClick(this)" alt="Scandinavian design">
+    <div class="coquette-header-container">
+      <div class="coquette-nav">
+        <a href="#showcase">SHOWCASE</a> 
+        <a href="#services">SERVICOS</a>
+        <span style="font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--coquette-burgundy); margin: 0 40px;">RUSTIC LUXE DESIGN</span>
+        <a href="#designers">DESIGNERS</a> 
+        <a href="#packages">PACOTES</a> 
+        <a href="#contact">CONTATO</a>
+      </div>
     </div>
-  </div>
-
-  <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
-      <p id="caption"></p>
+    
+    <div class="w3-container" style="margin-top:40px" id="showcase">
+        <h1 class="w3-jumbo"><b>Interior Design</b></h1>
+        <h1 class="w3-xxxlarge w3-text-red"><b>Showcase.</b></h1>
+        <hr style="width:50px;border:5px solid var(--coquette-burgundy)" class="w3-round">
     </div>
-  </div>
+    
+    <div class="w3-row-padding">
+        <div class="w3-half">
+          <img src="/Imagens/kitchenconcrete.jpg" style="width:100%" alt="Cozinha Rústica" onclick="onClick(this)">
+          <img src="/Imagens/livingroom.jpg" style="width:100%" alt="Sala de Estar" onclick="onClick(this)">
+          <img src="/Imagens/diningroom.jpg" style="width:100%" alt="Sala de Jantar" onclick="onClick(this)">
+        </div>
+    
+        <div class="w3-half">
+          <img src="/Imagens/atrium.jpg" style="width:100%" alt="Átrio Moderno" onclick="onClick(this)">
+          <img src="/Imagens/bedroom.jpg" style="width:100%" alt="Quarto Aconchegante" onclick="onClick(this)">
+          <img src="/Imagens/livingroom2.jpg" style="width:100%" alt="Segunda Sala" onclick="onClick(this)">
+        </div>
+    </div>
 
-  <!-- Services -->
-  <div class="w3-container" id="services" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Services.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>We are a interior design service that focus on what's best for your home and what's best for you!</p>
-    <p>Some text about our services - what we do and what we offer. We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </p>
-  </div>
-  
-  <!-- Designers -->
-  <div class="w3-container" id="designers" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Designers.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>The best team in the world.</p>
-    <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-    incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </p>
-    <p><b>Our designers are thoughtfully chosen</b>:</p>
-  </div>
+    <div class="w3-container" id="services" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Servicos.</b></h1>
+      <hr style="width:50px;border:5px solid var(--coquette-burgundy)" class="w3-round">
+      <p>Somos um serviço de design de interiores que valoriza a beleza do simples, o conforto do natural e o que há de melhor para o seu lar — e para você. Cada ambiente é pensado para refletir sua essência, unindo aconchego, autenticidade e harmonia.!</p>
+      <p>Acreditamos que cada lar carrega uma história — e é nela que encontramos a inspiração para criar ambientes cheios de vida, alma e aconchego.
+      Somos um serviço de design de interiores com essência rústica, que valoriza o natural, o artesanal e o que há de mais autêntico em cada detalhe.</p>
+      <div class="coquette-text-box">
+          Mais do que decorar, buscamos transformar espaços em refúgios. Lugares onde a madeira, a luz suave e as texturas naturais se unem para trazer conforto, equilíbrio e harmonia. Cada projeto é pensado com cuidado, respeitando o estilo, as memórias e o ritmo de quem vive nele.
+      </div>
+    </div>
+    
+    <div class="w3-container" id="designers" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Designers.</b></h1>
+      <hr style="width:50px;border:5px solid var(--coquette-burgundy)" class="w3-round">
+      <p>A melhor equipe do mundo, dedicada à excelência e movida por propósito.</p>
+      <p>Transformamos espaços em lugares cheios de alma, onde cada detalhe conta uma história. Nosso trabalho vai além da decoração — buscamos criar ambientes que transmitam conforto, harmonia e conexão com a natureza.</p>
+      <p><b>Nossos designers são cuidadosamente selecionados por sua experiência e dedicação em criar espaços que realmente inspiram.</b>:</p>
+    </div>
 
-  <!-- The Team -->
-  <div class="w3-row-padding w3-grayscale">
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="/Imagens/team2.jpg" alt="John" style="width:100%">
-        <div class="w3-container">
-          <h3>John Doe</h3>
-          <p class="w3-opacity">CEO & Founder</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+    <div class="w3-row-padding w3-grayscale">
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey w3-card-4" style="border-radius: 10px; border: 1px solid var(--coquette-pink); overflow: hidden; background-color: white !important;">
+          <img src="/Imagens/team2.jpg" alt="Gabriela Aguilera" style="width:100%; border-radius: 0;">
+          <div class="w3-container">
+            <h3>Gabriela Aguilera</h3>
+            <p class="w3-opacity">CEO & Fundadora</p>
+            <p>Acreditamos que a verdadeira beleza está na simplicidade..</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey w3-card-4" style="border-radius: 10px; border: 1px solid var(--coquette-pink); overflow: hidden; background-color: white !important;">
+          <img src="/Imagens/team1.jpg" alt="Jullia Marciano" style="width:100%; border-radius: 0;">
+          <div class="w3-container">
+            <h3>Jullia Marciano</h3>
+            <p class="w3-opacity">Designer</p>
+            <p>Projetando espaços com alma, criatividade e um toque pessoal..</p>
+          </div>
+        </div>
+        </div>
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey w3-card-4" style="border-radius: 10px; border: 1px solid var(--coquette-pink); overflow: hidden; background-color: white !important;">
+          <img src="/Imagens/team3.jpg" alt="Giulia Halax" style="width:100%; border-radius: 0;">
+          <div class="w3-container">
+            <h3>Giulia Halax</h3>
+            <p class="w3-opacity">Arquiteta</p>
+            <p>Cada parede conta uma história, cada ambiente guarda uma memória.</p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="/Imagens/team1.jpg" alt="Jane" style="width:100%">
-        <div class="w3-container">
-          <h3>Jane Doe</h3>
-          <p class="w3-opacity">Designer</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+
+    <div class="w3-container" id="packages" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Pacotes</b></h1>
+      <hr style="width:50px;border:5px solid var(--coquette-burgundy)" class="w3-round">
+      <p>Transforme seu espaço com nossos pacotes cuidadosamente planejados, pensados para combinar com seu estilo, suas necessidades e seu orçamento. Qualidade, criatividade e atenção aos detalhes estão no coração de tudo o que fazemos.</p>
+    </div>
+
+    <div class="w3-row-padding">
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-center">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32" style="background-color: var(--coquette-burgundy) !important; border-top-left-radius: 10px; border-top-right-radius: 10px;">Básico</li>
+          <li class="w3-padding-16">Floorplanning</li>
+          <li class="w3-padding-16">Suporte de 10 horas</li>
+          <li class="w3-padding-16">Fotografia</li>
+          <li class="w3-padding-16">20% de desconto</li>
+          <li class="w3-padding-16">Boas Ofetas</li>
+          <li class="w3-padding-16">
+            <h2>$ 199</h2>
+            <span class="w3-opacity">por cômodo</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24" style="background-color: var(--coquette-pink) !important;">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black" style="border-radius: 50px; color: var(--coquette-burgundy) !important; border: 1px solid var(--coquette-burgundy);">Inscreva - se </button>
+          </li>
+        </ul>
+      </div>
+          
+      <div class="w3-half">
+        <ul class="w3-ul w3-center">
+          <li class="w3-red w3-xlarge w3-padding-32" style="background-color: var(--coquette-burgundy) !important; border-top-left-radius: 10px; border-top-right-radius: 10px;">Pro</li>
+          <li class="w3-padding-16">Floorplanning</li>
+          <li class="w3-padding-16">Suporte de 50 horas</li>
+          <li class="w3-padding-16">Fotografia</li>
+          <li class="w3-padding-16">50% de desconto em móveis</li>
+          <li class="w3-padding-16">Grandes ofertas</li>
+          <li class="w3-padding-16">
+            <h2>$ 249</h2>
+            <span class="w3-opacity">por cômodo</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24" style="background-color: var(--coquette-pink) !important;">
+            <button class="w3-button w3-red w3-padding-large w3-hover-black coquette-button" style="margin-top: 0;">Junte - se a nós</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="w3-container" id="contact" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Contato.</b></h1>
+      <hr style="width:50px;border:5px solid var(--coquette-burgundy)" class="w3-round">
+      <p>Preencha o formulário e nos conte todos os detalhes :) Adoramos conhecer pessoas novas!</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-section">
+          <label>Nome</label>
+          <input class="w3-input w3-border" type="text" name="Name" required style="border-radius: 5px; border-color: var(--coquette-pink) !important;">
         </div>
-      </div>
-    </div>
-    <div class="w3-col m4 w3-margin-bottom">
-      <div class="w3-light-grey">
-        <img src="/Imagens/team3.jpg" alt="Mike" style="width:100%">
-        <div class="w3-container">
-          <h3>Mike Ross</h3>
-          <p class="w3-opacity">Architect</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        <div class="w3-section">
+          <label>Email</label>
+          <input class="w3-input w3-border" type="text" name="Email" required style="border-radius: 5px; border-color: var(--coquette-pink) !important;">
         </div>
-      </div>
+        <div class="w3-section">
+          <label>Mensagem</label>
+          <input class="w3-input w3-border" type="text" name="Message" required style="border-radius: 5px; border-color: var(--coquette-pink) !important;">
+        </div>
+        <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom coquette-button" style="margin-top: 20px;">Enviar Mensagem</button>
+      </form>  
     </div>
-  </div>
 
-  <!-- Packages / Pricing Tables -->
-  <div class="w3-container" id="packages" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Packages.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>Some text our prices. Lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>
-  </div>
-
-  <div class="w3-row-padding">
-    <div class="w3-half w3-margin-bottom">
-      <ul class="w3-ul w3-light-grey w3-center">
-        <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
-        <li class="w3-padding-16">Floorplanning</li>
-        <li class="w3-padding-16">10 hours support</li>
-        <li class="w3-padding-16">Photography</li>
-        <li class="w3-padding-16">20% furniture discount</li>
-        <li class="w3-padding-16">Good deals</li>
-        <li class="w3-padding-16">
-          <h2>$ 199</h2>
-          <span class="w3-opacity">per room</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
-        </li>
-      </ul>
-    </div>
-        
-    <div class="w3-half">
-      <ul class="w3-ul w3-light-grey w3-center">
-        <li class="w3-red w3-xlarge w3-padding-32">Pro</li>
-        <li class="w3-padding-16">Floorplanning</li>
-        <li class="w3-padding-16">50 hours support</li>
-        <li class="w3-padding-16">Photography</li>
-        <li class="w3-padding-16">50% furniture discount</li>
-        <li class="w3-padding-16">GREAT deals</li>
-        <li class="w3-padding-16">
-          <h2>$ 249</h2>
-          <span class="w3-opacity">per room</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-red w3-padding-large w3-hover-black">Sign Up</button>
-        </li>
-      </ul>
-    </div>
-  </div>
-  
-  <!-- Contact -->
-  <div class="w3-container" id="contact" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
-    <form action="/action_page.php" target="_blank">
-      <div class="w3-section">
-        <label>Name</label>
-        <input class="w3-input w3-border" type="text" name="Name" required>
-      </div>
-      <div class="w3-section">
-        <label>Email</label>
-        <input class="w3-input w3-border" type="text" name="Email" required>
-      </div>
-      <div class="w3-section">
-        <label>Message</label>
-        <input class="w3-input w3-border" type="text" name="Message" required>
-      </div>
-      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
-    </form>  
-  </div>
-
-<!-- End page content -->
 </div>
 
-<!-- W3.CSS Container -->
-<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px; background-color: var(--coquette-pink) !important; color: var(--coquette-burgundy) !important;">
+    <p class="w3-right">Fornecido por<a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" style="color: var(--coquette-burgundy) !important;" class="w3-hover-opacity">w3.css</a></p>
+</div>
 
 <script>
-// Script to open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
-
 // Modal Image Gallery
 function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
 }
 </script>
 
