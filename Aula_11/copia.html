@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pizzaria do Pochacco</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#a7e3ff;
+  --pink:#ffd8e7;
+  --yellow:#fff8b5;
+  --white:#fff;
+  --black:#222;
+  --accent:#ffb6c1;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Baloo 2', cursive;
+  background:linear-gradient(135deg,var(--blue) 0%, var(--pink) 100%);
+  color:var(--black);
+  -webkit-font-smoothing:antialiased;
+}
+
+/* NAVBAR */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:linear-gradient(90deg,var(--blue),var(--pink));
+  padding:10px 24px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+header img.logo{
+  height:64px;
+  border-radius:50%;
+}
+nav a{
+  margin:0 12px;
+  text-decoration:none;
+  color:var(--black);
+  font-weight:700;
+  font-size:1.05rem;
+}
+nav a:hover{
+  color:var(--white);
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:80px 20px 48px;
+  background:linear-gradient(120deg,var(--pink),var(--yellow));
+}
+.hero h1{
+  font-family:'Amatic SC', cursive;
+  font-size:72px;
+  margin:0 0 6px;
+}
+.hero p{
+  font-size:20px;
+  margin:0;
+}
+
+/* MENU GERAL */
+.menu-section{
+  max-width:1100px;
+  margin:50px auto;
+  text-align:center;
+  padding:0 16px;
+}
+.menu-section h2{
+  font-family:'Amatic SC';
+  font-size:48px;
+  margin:6px 0 18px;
+  color:var(--black);
+}
+.menu-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+  padding:12px;
+}
+.menu-item{
+  background:var(--white);
+  border-radius:16px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+  overflow:hidden;
+  transition:transform .18s ease, box-shadow .18s ease;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+.menu-item:hover{
+  transform:translateY(-6px);
+  box-shadow:0 14px 34px rgba(0,0,0,0.12);
+}
+.menu-item img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  display:block;
+}
+.menu-item .card-body{
+  padding:14px 14px 20px;
+  width:100%;
+}
+.menu-item h3{
+  font-size:1.4rem;
+  margin:6px 0;
+  color:var(--black);
+}
+.menu-item p{
+  margin:0 0 12px;
+  font-size:0.98rem;
+  color:#333;
+}
+.price{
+  background:linear-gradient(90deg,var(--black),#444);
+  color:var(--white);
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:12px;
+  margin-bottom:6px;
+  font-weight:700;
+}
+
+/* categorias especiais */
+.tag{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  font-weight:700;
+  font-size:0.85rem;
+  margin-right:8px;
+}
+.tag.pink{ background:var(--pink); color:var(--black); }
+.tag.yellow{ background:var(--yellow); color:var(--black); }
+
+/* SEÇÃO DE CONTATO */
+.contact{
+  padding:50px 20px;
+  background:linear-gradient(120deg,var(--yellow),var(--blue));
+  text-align:center;
+}
+.contact h2{
+  font-family:'Amatic SC';
+  font-size:44px;
+  margin-bottom:10px;
+}
+.contact p{
+  font-size:18px;
+}
+form{
+  max-width:520px;
+  margin:24px auto 0;
+  background:var(--white);
+  padding:20px;
+  border-radius:14px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+input, textarea, button{
+  width:100%;
+  padding:12px;
+  margin:8px 0;
+  border:none;
+  border-radius:8px;
+  font-family:'Baloo 2';
+  font-size:15px;
+}
+input, textarea{
+  background:#f6f6f6;
+}
+button{
+  background:linear-gradient(90deg,var(--blue),var(--pink));
+  font-weight:700;
+  cursor:pointer;
+  color:var(--black);
+}
+button:hover{
+  opacity:0.95;
+}
+
+/* FOOTER */
+footer{
+  background:linear-gradient(90deg,#111,#222);
+  color:var(--white);
+  text-align:center;
+  padding:22px 12px;
+  font-size:1rem;
+}
+
+/* responsivo */
+@media (max-width:640px){
+  .hero h1{ font-size:48px; }
+  .menu-item img{ height:140px; }
+  nav a{ font-size:0.95rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="/Aula_11/img.jpg" alt="Logo da Pizzaria do Pochacco" class="logo">
+  <nav aria-label="Menu principal">
+    <a href="#home">Home</a>
+    <a href="#menu">Cardápio</a>
+    <a href="#contact">Contato</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h1>Pizzaria do Pochacco</h1>
+  <p>Sabores fofos e deliciosos para alegrar seu dia!</p>
+</section>
+
+<section class="menu-section" id="menu">
+  <h2>Pizzas do Pochacco</h2>
+  <div class="menu-grid" role="list">
+    <div class="menu-item" role="listitem">
+      <img src="/Aula_11/jh.jpg" alt="Pizza Primavera">
+      <div class="card-body">
+        <h3>Pizza Primavera do Pochacco</h3>
+        <p>Molho leve, mussarela fresca, tomate cereja e manjericão.</p>
+        <span class="price">R$ 39,90</span>
+      </div>
+    </div>
+    <div class="menu-item" role="listitem">
+      <img src="/Aula_11/op.jpg" alt="Delícia das Nuvens">
+      <div class="card-body">
+        <h3>Delícia das Nuvens</h3>
+        <p>Queijo cremoso, frango e toque de mel no estilo Pochacco.</p>
+        <span class="price">R$ 42,00</span>
+      </div>
+    </div>
+    <div class="menu-item" role="listitem">
+      <img src="/Aula_11/df.jpg" alt="Lua de Queijo">
+      <div class="card-body">
+        <h3>Lua de Queijo</h3>
+        <p>Três tipos de queijo e crosta dourada, um clássico encantador.</p>
+        <span class="price">R$ 44,90</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section">
+  <h2>Saladas e Massas</h2>
+  <div class="menu-grid" role="list">
+    <div class="menu-item" role="listitem">
+      <img src="/Aula_11/opk.jpg" alt="Salada Encantada">
+      <div class="card-body">
+        <h3>Salada Encantada</h3>
+        <p>Mix de folhas frescas com morango e molho cítrico leve.</p>
+        <span class="price">R$ 28,50</span>
+      </div>
+    </div>
+    <div class="menu-item" role="listitem">
+      <img src="/Aula_11/ff.jpg" alt="Lasanha do Campo">
+      <div class="card-body">
+        <h3>Lasanha do Campo</h3>
+        <p>Molho de tomate artesanal, camadas generosas e queijo derretido.</p>
+        <span class="price">R$ 36,90</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section">
+  <h2>Entradinhas do Pochacco</h2>
+  <div class="menu-grid" role="list">
+    <div class="menu-item" role="listitem">
+      <img src="/Aula_11/ed.jpg" alt="Pãezinhos de Alho">
+      <div class="card-body">
+        <h3>Pãezinhos de Alho</h3>
+        <p>Macios, douradinhos e cheios de sabor.</p>
+        <span class="price">R$ 15,90</span>
+      </div>
+    </div>
+    <div class="menu-item" role="listitem">
+      <img src="/Aula_11/hjg.jpg" alt="Batatinhas Fofas">
+      <div class="card-body">
+        <h3>Batatinhas Fofas</h3>
+        <p>Crocantes por fora, macias por dentro e cheias de amor.</p>
+        <span class="price">R$ 18,00</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section">
+  <h2>Sobremesas</h2>
+  <div class="menu-grid" role="list">
+    <div class="menu-item" role="listitem">
+      <img src="/Aula_11/dsa.jpg" alt="Gelato Pochacco">
+      <div class="card-body">
+        <h3>Gelato Pochacco</h3>
+        <p>Sorvete artesanal com calda de frutas vermelhas.</p>
+        <span class="price">R$ 6,50</span>
+      </div>
+    </div>
+    <div class="menu-item" role="listitem">
+      <img src="/Aula_11/unnamed.jpg" alt="Bolo do Pochacco">
+      <div class="card-body">
+        <h3>Bolo do Pochacco</h3>
+        <p>Fatias de bolo de chocolate decoradas.</p>
+        <span class="price">R$ 5,50</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section">
+  <h2>Bebidas</h2>
+  <div class="menu-grid" role="list">
+    <div class="menu-item" role="listitem">
+      <img src="/Aula_11/sc.jpg" alt="Limonada Pochacco">
+      <div class="card-body">
+        <h3>Limonada Pochacco</h3>
+        <p>Limonada com hortelã, refrescante.</p>
+        <span class="price">R$ 3,50</span>
+      </div>
+    </div>
+    <div class="menu-item" role="listitem">
+      <img src="/Aula_11/der.jpg" alt="Milkshake Morango">
+      <div class="card-body">
+        <h3>Milkshake Morango</h3>
+        <p>Cremoso e coberto com chantilly.</p>
+        <span class="price">R$ 4,50</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section">
+  <h2>Kids & Specials</h2>
+  <div class="menu-grid" role="list">
+    <div class="menu-item" role="listitem">
+      <img src="/Aula_11/fh.jpg" alt="Mini Margarita">
+      <div class="card-body">
+        <h3>Mini Margarita</h3>
+        <p>Tamanho infantil, ideal para crianças.</p>
+        <span class="price">R$ 7,50</span>
+      </div>
+    </div>
+    <div class="menu-item" role="listitem">
+      <img src="/Aula_11/gj.jpg" alt="Pochacco Picnic">
+      <div class="card-body">
+        <h3>Pochacco Picnic</h3>
+        <p>Combo com pizza, salada e sobremesa individual.</p>
+        <span class="price">R$ 24,00</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Contato</h2>
+  <p>Entre em contato conosco! 💌</p>
+  <form>
+    <input type="text" placeholder="Seu nome" aria-label="Seu nome" required>
+    <input type="email" placeholder="Seu e-mail" aria-label="Seu e-mail" required>
+    <textarea placeholder="Sua mensagem" rows="5" aria-label="Sua mensagem" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<footer>
+  © 2025 Pizzaria do Pochacco — Amor em cada fatia 🍕
+</footer>
+
+</body>
+</html>
