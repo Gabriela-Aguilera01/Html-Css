@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #ffadf1; /* vinho escuro */
+  font-family: "Times New Roman", Times, serif;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Quadrado base */
+.quadrado {
+  width: 200px;
+  height: 200px;
+  background-color: #fffac2; /* dourado suave */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Texto dentro do quadrado */
+.numero {
+  font-size: 60px;
+  color: #640d6a; /* vinho escuro para contraste */
+  font-weight: bold;
+}
+
+/* Grupo central (1, 2, 3) */
+.container-centro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Grupo da direita (4, 5, 6) */
+.container-direita {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+
+  /* alinhamento abaixo da linha do 3º quadrado */
+  top: calc(50% + 330px); /* 3 quadrados (200px * 3) + 2 gaps (15px * 2) / 2 para centralização */
+  right: 40px; /* canto direito */
+}
+
+/*
+Cálculo explicado:
+- 3 quadrados de 200px = 600px
+- 2 espaços de 15px = 30px
+- Metade da tela (50%) + metade da altura total central (330px) = início logo abaixo do 3º quadrado
+*/

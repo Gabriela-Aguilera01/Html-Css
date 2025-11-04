@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #f3ffad; 
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: flex-start;     
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+  margin: 0px; 
+}
+
+
+.linha {
+  display: flex;
+  flex-direction: row; 
+  gap: 15px; 
+}
+
+
+.quadrado {
+  width: 200px;
+  height: 200px;
+  background-color: #a3c572; 
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.numero {
+  font-size: 60px;
+  color: #000000; 
+  font-weight: bold;
+}
