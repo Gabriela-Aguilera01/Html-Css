@@ -1,0 +1,61 @@
+* { margin:0; padding:0; }
+
+body {
+  background:white;
+  padding:30px;
+  font-family:Arial,sans-serif;
+}
+
+.ex1,.ex2,.ex3,.ex4,.ex5,.ex6,.ex7,.ex8,.ex9,.ex10,.ex11,.ex12,.ex13 { margin-bottom:100px; }
+
+.quadrado,.caixa,.card {
+  width:250px;
+  height:250px;
+  background:#3498db;
+  color:rgb(0, 0, 0);
+  font-size:30px;
+  font-weight:bold;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:20px;
+  margin:10px;
+}
+
+.ex1 { display:flex; justify-content:center; align-items:center; height:100vh; }
+.quadrado { width:100px; height:100px; background:#b6fff8; }
+
+.ex2 { display:flex; gap:30px; }
+.ex2 .caixa { flex:02; background:#eec3ff; }
+
+.ex3 { display:flex; flex-direction:row-reverse; gap:10px; }
+.ex3 .caixa { background:#c5c0ff; }
+
+.ex4 { display:flex; flex-direction:column; justify-content:center; align-items:center; height:100vh; gap:30px; }
+.ex4 .caixa { width:320px; background:#b8ffc8; color:black; }
+
+.ex5 { display:flex; }
+.ex5 .caixa { flex:02; background:#ffe3ca; }
+
+.ex6 { display:flex; flex-wrap:wrap; gap:30px; }
+.ex6 .caixa { background:#ffcbdd; }
+
+.ex7 { display:flex; justify-content:flex-end; gap:30px; }
+.ex7 .caixa { background:#fbffc9; }
+
+.ex8 { display:flex; justify-content:space-between; }
+.ex8 .caixa { width:180px; background:#ff9dbd; }
+
+.ex9 { display:flex; flex-wrap:wrap; gap:30px; justify-content:center; }
+.card { flex:1; min-width:280px; background:#8bfffb; }
+
+.ex10 { display:flex; justify-content:space-between; background:#9bcfff; color:rgb(255, 233, 233); padding:50px; border-radius:20px; font-size:20px; }
+.ex10 > div { background:#46a2ff; padding:20px 40px; border-radius:15px; }
+
+.ex11 { display:flex; align-items:center; justify-content:center; height:400px; background:#fcd9a7; color:white; font-size:50px; text-align:center; border-radius:20px; }
+
+.ex12 { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; }
+.ex12 img { border-radius:20px; }
+
+.ex13 { display:flex; flex-wrap:wrap; gap:25px; }
+.ex13 img { flex:1; min-width:300px; height:250px; object-fit:cover; border-radius:20px; }
