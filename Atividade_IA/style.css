@@ -1,0 +1,209 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fb1789 0%, #fce7f3 50%, #f8e1f0 100%);
+    color: #4a2c3d;
+    line-height: 1.8;
+}
+
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(192, 67, 121, 0.75), rgba(255, 252, 254, 0.85)),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="4"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.3"/></svg>') center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.overlay { 
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
+    background: linear-gradient(135deg, rgba(255,182,215,0.7), rgba(255,105,180,0.6));
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 6.8rem;
+    color: #ffffff;
+    text-shadow: 3px 3px 12px rgba(0,0,0,0.6);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 1.7rem;
+    font-weight: 300;
+    color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.scroll-hint {
+    position: absolute;
+    bottom: 30px;
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+    color: #fff;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 171, 202, 0.95);
+    backdrop-filter: blur(12px);
+    padding: 22px 0;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 5px 20px rgba(255,105,180,0.2);
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    list-style: none;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.25rem;
+    padding: 10px 24px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+}
+
+.container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 60px 20px; 
+}
+
+.section-glass {
+    background: rgba(255,255,255,0.78);
+    backdrop-filter: blur(14px);
+    border-radius: 26px;
+    padding: 50px;
+    margin: 60px 0;
+    box-shadow: 0 15px 40px rgba(255,105,180,0.25);
+    border: 1px solid rgba(255,182,215,0.4);
+}
+
+#o-que-e {
+    background: rgba(255, 255, 255, 0.95) !important;
+}
+
+#o-que-e p {
+    font-size: 1.28rem !important;
+    line-height: 2.1 !important;
+    color: #2e1438 !important;
+    text-align: justify;
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.section-title, h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    color: #d81b60;
+    text-align: center;
+    margin: 80px 0 40px;
+}
+
+.videos-wrapper { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); 
+    gap: 40px; 
+}
+
+.video-card.glass { 
+    background: rgba(255,255,255,0.85); 
+    border-radius: 20px; 
+    overflow: hidden; 
+    box-shadow: 0 15px 35px rgba(255,105,180,0.3); 
+    transition: 0.4s; 
+}
+
+.video-card:hover { 
+    transform: translateY(-12px); 
+}
+
+.video-header { 
+    padding: 28px; 
+    text-align: center; 
+}
+
+.video-header h3 { 
+    font-size: 1.45rem; 
+    color: #ad1457; 
+}
+
+.desc { 
+    font-size: 1.08rem; 
+    color: #6a1b9a; 
+    line-height: 1.7; 
+}
+
+.channel { 
+    font-weight: 600; 
+    color: #e91e63; 
+    font-size: 1.15rem; 
+}
+
+iframe { 
+    width: 100%; 
+    height: 330px; 
+    border: none; 
+}
+
+.grid-apps { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 28px; 
+    margin-top: 30px; 
+}
+
+.app { 
+    background: rgba(255,245,250,0.95); 
+    padding: 28px; 
+    border-radius: 18px; 
+    text-align: center; 
+    font-size: 1.18rem; 
+    border: 1px solid rgba(255,182,215,0.5); 
+    transition: 0.3s; 
+}
+
+.app:hover { 
+    transform: scale(1.06); 
+    box-shadow: 0 12px 30px rgba(255,105,180,0.35); 
+}
+
+.footer-lux {
+    background: linear-gradient(135deg, #ff80ab, #ff94c2);
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+    margin-top: 100px;
+    font-size: 1.1rem;
+}
+
+.footer-lux a { 
+    color: white; 
+    text-decoration: none; 
+}
+
+.footer-lux a:hover { 
+    text-decoration: underline; 
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}

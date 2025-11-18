@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inteligência Artificial • Gabriela Aguilera</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Inteligência Artificial</h1>
+            <p class="subtitle">O futuro já começou. Vamos entender juntos?</p>
+        </div>
+        <div class="scroll-hint">▼</div>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#o-que-e">O que é IA?</a></li>
+            <li><a href="#videos">Vídeos</a></li>
+            <li><a href="#aplicacoes">Aplicações</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+
+        <section id="o-que-e" class="section-glass intro-text">
+    <h2>O que é Inteligência Artificial?</h2>
+    <p>
+        A Inteligência Artificial (IA) é a capacidade de máquinas executarem tarefas que normalmente exigem inteligência humana: aprender com dados, reconhecer padrões, tomar decisões e até criar conteúdo.<br><br>
+        Ela funciona com algoritmos avançados, como redes neurais e deep learning, que “treinam” as máquinas com milhões de exemplos.<br><br>
+        Desde os anos 1950 os cientistas sonham com isso, e hoje a IA já está no nosso dia a dia: no celular (Siri, Google), nas recomendações do Netflix e Spotify, nos carros autônomos da Tesla e até ajudando médicos a detectar doenças com mais precisão.<br><br>
+        A IA não veio para substituir pessoas — veio para nos ajudar a fazer coisas incríveis com mais rapidez e inteligência. E o melhor: essa revolução está só começando!
+    </p>
+</section>
+
+        <section id="videos">
+            <h2 class="section-title">Vídeos Selecionados</h2>
+
+            <div class="videos-wrapper">
+                <div class="video-card glass">
+                    <div class="video-header">
+                        <h3>O que é Inteligência Artificial?</h3>
+                        <p class="desc">Explicação completa e acessível sobre os conceitos fundamentais da IA, com exemplos do dia a dia.</p>
+                        <p class="channel"><i class="fas fa-tv"></i> g1</p>
+                    </div>
+                    <iframe src="https://www.youtube.com/embed/D2KIu_yDeJk" allowfullscreen></iframe>
+                </div>
+
+                <div class="video-card glass">
+                    <div class="video-header">
+                        <h3>Inteligência Artificial explicada em 10 minutos</h3>
+                        <p class="desc">Uma das melhores introduções em português: didática, atualizada e com animações lindas.</p>
+                        <p class="channel"><i class="fas fa-flask"></i> Ciência Todo Dia</p>
+                    </div>
+                    <iframe src="https://www.youtube.com/embed/-3VK7qF-6dY" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="aplicacoes" class="section-glass">
+            <h2>Aplicações da IA no Mundo Real</h2>
+            <div class="grid-apps">
+                <div class="app"><i class="fas fa-robot"></i> Assistentes virtuais,Siri, Alexa entre outros</div>
+                <div class="app"><i class="fas fa-car"></i> Carros autônomos como Tesla, Waymo etc..</div>
+                <div class="app"><i class="fas fa-film"></i> Recomendações Netflix, YouTube</div>
+                <div class="app"><i class="fas fa-heartbeat"></i> Diagnóstico médico por imagem</div>
+                <div class="app"><i class="fas fa-comments"></i> Chatbots e atendimento 24h</div>
+                <div class="app"><i class="fas fa-palette"></i> Criação de arte Midjourney, DALL-E</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer-lux">
+        <p>Desenvolvido com carinho por <strong>Gabriela Aguilera</strong></p>
+        <p>18 de novembro de 2025</p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:slapq.14@gmail.com">slapq.14@gmail.com</a></p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
